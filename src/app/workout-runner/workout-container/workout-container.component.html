@@ -1,0 +1,9 @@
+<app-workout-runner [workoutName]="workoutName"
+                (exercisePaused)="wa.stop()"
+                (exerciseResumed)="wa.resume()"
+                (exerciseProgress)="wa.onExerciseProgress($event)"
+                (exerciseChanged)="wa.onExerciseChanged($event)"
+                (workoutComplete)="wa.stop()"
+                (workoutStarted)="wa.resume()">
+</app-workout-runner>
+<app-workout-audio #wa></app-workout-audio>
